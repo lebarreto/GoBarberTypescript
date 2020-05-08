@@ -1,5 +1,3 @@
-import path from 'path';
-import fs from 'fs';
 import { inject, injectable } from 'tsyringe';
 
 import Users from '../infra/typeorm/entities/Users';

@@ -16,7 +16,7 @@ class UserToken {
   @Generated('uuid')
   token: string;
 
-  @Column()
+  @Column('uuid')
   user_id: string;
 
   @CreateDateColumn()

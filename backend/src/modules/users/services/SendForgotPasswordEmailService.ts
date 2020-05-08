@@ -1,6 +1,5 @@
 import { inject, injectable } from 'tsyringe';
 
-import Users from '../infra/typeorm/entities/Users';
 import AppError from '@shared/errors/AppError';
 import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 import IMailProvider from '@shared/container/providers/MailProvider/models/IMailProvider';
@@ -12,26 +11,34 @@ interface IRequest {
 
 @injectable()
 export default class SendForgotPasswordEmailService {
+  private usersRepository: IUsersRepository;
+  private mailProvider: IMailProvider;
+  private userTokenRepository: IUserTokenRepository;
+
   constructor(
     @inject('UsersRepository')
-    private userRepository: IUsersRepository,
+    usersRepository: IUsersRepository,
 
     @inject('MailProvider')
-    private mailProvider: IMailProvider,
+    mailProvider: IMailProvider,
 
     @inject('UserTokenRepository')
-    private userTokenRepository: IUserTokenRepository,
-  ) {}
+    userTokenRepository: IUserTokenRepository,
+  ) {
+    this.usersRepository = usersRepository;
+    this.mailProvider = mailProvider;
+    this.userTokenRepository = userTokenRepository;
+  }
 
   public async execute({ email }: IRequest): Promise<void> {
-    const user = await this.userRepository.findByEmail(email);
+    const user = await this.usersRepository.findByEmail(email);
 
     if (!user) {
-      throw new AppError('Usuário não existe.');
+      throw new AppError('Usuário não existe.', 401);
     }
 
     await this.userTokenRepository.generateToken(user.id);
 
-    this.mailProvider.sendMail(email, 'Testando');
+    await this.mailProvider.sendMail(email, 'Testando');
   }
 }
