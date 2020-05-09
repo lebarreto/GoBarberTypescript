@@ -17,8 +17,4 @@ export default class ForgotPasswordController {
 
     return response.status(204).json();
   }
-
-  public async index(request: Request, response: Response): Promise<Response> {
-    return response.status(204).json();
-  }
 }
