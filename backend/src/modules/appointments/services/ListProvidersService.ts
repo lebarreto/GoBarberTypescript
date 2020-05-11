@@ -20,10 +20,6 @@ export default class ListProvidersService {
       except_user_id: user_id,
     });
 
-    if (!user) {
-      throw new AppError('Usuário não encontrado.');
-    }
-
     return user;
   }
 }
