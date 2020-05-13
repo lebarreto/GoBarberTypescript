@@ -22,8 +22,6 @@ export default class ShowProfileService {
       throw new AppError('Usuário não encontrado.');
     }
 
-    delete user.password;
-
     return user;
   }
 }
