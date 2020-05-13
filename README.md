@@ -57,7 +57,7 @@ Para rodar o backend em sua máquina, siga o seguinte passo a passo:
 
 Para rodar os testes no backend, rode `yarn test`.
 
-## ⛏️ Built Using <a name = "built_using"></a>
+## ⛏️ Tecnologias <a name = "built_using"></a>
 
 - [MongoDB](https://www.mongodb.com/)
 - [PostgreSQL](https://www.postgresql.org/)
