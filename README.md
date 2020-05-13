@@ -1,7 +1,4 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="https://user-images.githubusercontent.com/35263018/81865926-7ca53680-953c-11ea-910b-7ef9a6bbd9e4.png" alt="GoBarber logo"></a>
-</p>
+
 
 <h3 align="center">GoBarber</h3>
 
