@@ -14,23 +14,7 @@ const providerDayAvailability = new ProviderDayAvailabilityController();
 providersRouter.use(ensureAuthenticated);
 
 providersRouter.get('/', providersController.index);
-providersRouter.get(
-  '/:id/month',
-  celebrate({
-    [Segments.PARAMS]: {
-      provider_id: Joi.string().uuid().required(),
-    },
-  }),
-  providerMonthAvailability.index,
-);
-providersRouter.get(
-  '/:id/day',
-  celebrate({
-    [Segments.PARAMS]: {
-      provider_id: Joi.string().uuid().required(),
-    },
-  }),
-  providerDayAvailability.index,
-);
+providersRouter.get('/:id/month', providerMonthAvailability.index);
+providersRouter.get('/:id/day', providerDayAvailability.index);
 
 export default providersRouter;
