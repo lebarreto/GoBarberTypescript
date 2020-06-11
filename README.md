@@ -1,5 +1,3 @@
-
-
 <h3 align="center">GoBarber</h3>
 
 <div align="center">
@@ -53,6 +51,15 @@ Para rodar o backend em sua máquina, siga o seguinte passo a passo:
 ## 🔧 Executando os testes <a name = "tests"></a>
 
 Para rodar os testes no backend, rode `yarn test`.
+
+### Instalação do frontend
+
+Para rodar o frontend em sua máquina, siga o seguinte passo a passo:
+
+1. Inicie o backend.
+2. Entre na pasta do frontend: `cd frontend`.
+3. Rode `yarn` para instalar todas as dependências.
+4. Rode `yarn start` para abrir o projeto web no browser.
 
 ## ⛏️ Tecnologias <a name = "built_using"></a>
 
