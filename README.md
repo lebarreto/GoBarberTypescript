@@ -48,10 +48,6 @@ Para rodar o backend em sua máquina, siga o seguinte passo a passo:
 5. Rode `yarn typeorm migration:run` para executar todas as migrations.
 6. Rode `yarn start` para iniciar a api.
 
-## 🔧 Executando os testes <a name = "tests"></a>
-
-Para rodar os testes no backend, rode `yarn test`.
-
 ### Instalação do frontend
 
 Para rodar o frontend em sua máquina, siga o seguinte passo a passo:
@@ -60,6 +56,10 @@ Para rodar o frontend em sua máquina, siga o seguinte passo a passo:
 2. Entre na pasta do frontend: `cd frontend`.
 3. Rode `yarn` para instalar todas as dependências.
 4. Rode `yarn start` para abrir o projeto web no browser.
+
+## 🔧 Executando os testes <a name = "tests"></a>
+
+Para rodar os testes no backend, rode `yarn test`.
 
 ## ⛏️ Tecnologias <a name = "built_using"></a>
 
