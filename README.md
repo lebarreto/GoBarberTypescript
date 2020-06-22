@@ -57,6 +57,15 @@ Para rodar o frontend em sua máquina, siga o seguinte passo a passo:
 3. Rode `yarn` para instalar todas as dependências.
 4. Rode `yarn start` para abrir o projeto web no browser.
 
+### Instalação do mobile
+
+Para rodar o mobile em sua máquina, siga o seguinte passo a passo:
+
+1. Inicie o backend.
+2. Entre na pasta do mobile: `cd mobile`.
+3. Rode `yarn` para instalar todas as dependências.
+4. Rode `react-native run-ios` para abrir o projeto no emulador do ios.
+
 ## 🔧 Executando os testes <a name = "tests"></a>
 
 Para rodar os testes no backend, rode `yarn test`.
